@@ -6,12 +6,13 @@ const TeamCard = props => {
   const {name, id, teamImageURL} = teamDetails
 
   return (
-    <Link exact to={`/team-matches/${id}`} className="link-item">
       <li className="team-item">
-        <img src={teamImageURL} alt={name} className="team-logo" />
-        <p className="team-name">{name}</p>
+        <Link exact to={`/team-matches/${id}`} className="link-item">
+          <img src={teamImageURL} alt={name} className="team-logo" />
+          <p className="team-name">{name}</p>
+        </Link>
       </li>
-    </Link>
+    
   )
 }
 
